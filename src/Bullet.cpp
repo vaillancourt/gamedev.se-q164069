@@ -1,19 +1,10 @@
-#include "pch.h"
 #include "Bullet.h"
 #include <iostream>
 
-Bullet::Bullet()
+Bullet::Bullet(Texture& texture)
+  : t(texture)
 {
-	//Setting Texture
-	if (!t.loadFromFile("Graphics/bullet.png"))
-	{
-		std::cout << "Bullet Texture Failed to Load\n";
-	}
-	else
-	{
-		t.loadFromFile("Graphics/bullet.png");
-		bullet.setTexture(t);
-	}
+	bullet.setTexture(t);
 }
 
 Bullet::~Bullet()

@@ -6,11 +6,11 @@ using namespace sf;
 class Bullet
 {
 private:
-	Texture t;
+	Texture& t;
 	Sprite bullet;
 	Vector2f pos;
 public:
-	Bullet();
+	Bullet(Texture& texture);
 	~Bullet();
 	void setPos(Vector2f pos);
 	void update();
